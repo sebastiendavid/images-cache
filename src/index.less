@@ -1,0 +1,39 @@
+@import "lesshat/build/lesshat";
+
+*, *:before, *:after {
+    .box-sizing(border-box);
+}
+
+body {
+    margin: 0;
+    padding: 2em;
+}
+
+button.clear-button {
+    float: right;
+    background: #2980b9;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 0.2em;
+    font-size: 0.5em;
+    padding: 0.5em;
+    margin: 0;
+
+    &:hover {
+        background: #3498db;
+    }
+}
+
+div.images {
+    @imageSize: 100px;
+    font-size: 0;
+
+    & > img.image {
+        display: inline-block;
+        width: @imageSize;
+        height: @imageSize;
+        border: 5px solid #2c3e50;
+        margin: 0 16px 16px 0;
+    }
+}

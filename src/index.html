@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Images cache</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="normalize-css/normalize.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+
+<body ng-controller="imagesCtrl">
+    <h1>
+        <span class="title">Images</span>
+        <button class="clear-button" ng-click="invalidateCache()">Invalidate images cache</button>
+    </h1>
+
+    <div class="images">
+        <img class="image" ng-repeat="image in images" ng-src="{{ image.urlThumb }}"/>
+    </div>
+
+    <script src="jquery/dist/jquery.js"></script>
+    <script src="lodash/dist/lodash.js"></script>
+    <script src="moment/moment.js"></script>
+    <script src="angular/angular.js"></script>
+    <script src="angular-animate/angular-animate.js"></script>
+    <script src="angular-cookies/angular-cookies.js"></script>
+    <script src="angular-resource/angular-resource.js"></script>
+    <script src="angular-route/angular-route.js"></script>
+    <script src="angular-sanitize/angular-sanitize.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
